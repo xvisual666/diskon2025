@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title id="typewriter-title">XVISUAL ROLEPLAY - BERANDA</title>
+    <link rel="icon" type="image/png" href="icon/1.png">
+    <link rel="shortcut icon" type="image/png" href="icon/1.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/1.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/1.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const title = "XVISUAL ROLEPLAY - BERANDA";
+            let i = 0;
+            const speed = 100; // Kecepatan mengetik (ms)
+            
+            function typeWriter() {
+                if (i < title.length) {
+                    document.title = title.substring(0, i + 1) + "_";
+                    i++;
+                    setTimeout(typeWriter, speed);
+                } else {
+                    document.title = title; // Hapus underscore di akhir
+                    // Mulai ulang animasi setelah jeda
+                    setTimeout(() => {
+                        i = 0;
+                        typeWriter();
+                    }, 2000);
+                }
+            }
+            
+            typeWriter();
+        });
+    </script>
+</head>
+<body>
+    <div class="aurora-container">
+        <div class="aurora"></div>
+        <div class="aurora"></div>
+        <div class="aurora"></div>
+    </div>
+    <div class="stars"></div>
+    <div class="container">
+        <div class="category-tabs">
+            <button class="tab-btn active" data-category="all"><i class="fas fa-border-all"></i> Semua</button>
+            <button class="tab-btn" data-category="mod"><i class="fas fa-puzzle-piece"></i> Mod</button>
+            <button class="tab-btn" data-category="preset"><i class="fas fa-sliders-h"></i> Preset</button>
+            <button class="tab-btn" data-category="fps"><i class="fas fa-tachometer-alt"></i> FPS Boost</button>
+        </div>
+
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Cari mod..." onkeyup="searchProducts()">
+            </div>
+            <a href="review.html" class="review-btn">
+                <div class="tooltip">Cara Instal dan Review disini!</div>
+                <i class="fas fa-star"></i>
+                <span class="review-text">INSTAL AND REVIEW</span>
+                <div class="corner corner-tl"></div>
+                <div class="corner corner-tr"></div>
+                <div class="corner corner-bl"></div>
+                <div class="corner corner-br"></div>
+            </a>
+        </div>
+        <div class="products-container" id="productsContainer">
+            <div class="product-card" data-category="ENB" data-special="true">
+                <div class="card-inner">
+                    <!-- Front Side -->
+                    <div class="card-front">
+                        <div class="special-badge">BASIC</div>
+                        <div class="product-image-placeholder">
+                            <div class="cyber-pattern"></div>
+                            <div class="product-type">QUANTV BASIC</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Quantv (BASIC)</h3>
+                            <p class="price"><i class="fas fa-tag"></i> Rp 50.000</p>
+                            <button class="buy-btn"><i class="fas fa-shopping-cart"></i> Beli Sekarang</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Back Side -->
+                    <div class="card-back">
+                        <h3>BASIC Package</h3>
+                        <ul class="special-features">
+                            <li><i class="fas fa-check-circle"></i> Mendapatkan Quantv versi terbaru</li>
+                            <li><i class="fas fa-gift"></i> BONUS EKSKLUSIF: Sudah Include 1 Preset Quantv untuk pengalaman visual yang memukau</li>
+                        </ul>
+                        <button class="buy-btn">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB" data-special="true">
+                <div class="card-inner">
+                    <!-- Front Side -->
+                    <div class="card-front">
+                        <div class="special-badge">PRO</div>
+                        <div class="product-image-placeholder">
+                            <div class="cyber-pattern"></div>
+                            <div class="product-type">QUANTV PRO</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Quantv (PRO)</h3>
+                            <p class="price">Rp 75.000</p>
+                            <button class="buy-btn">Beli Sekarang</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Back Side -->
+                    <div class="card-back">
+                        <h3>PRO Package</h3>
+                        <ul class="special-features">
+                            <li>UPDATE GRATIS : Versi dan fitur terbaru secara gratis selama 30 hari</li>
+                            <li>Semua fitur dari paket BASIC</li>
+                            <div class="included-basic">
+                                <li>• Quantv versi terbaru</li>
+                                <li>• BONUS: 1 Preset Quantv eksklusif</li>
+                            </div>
+                        </ul>
+                        <button class="buy-btn">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB" data-special="true">
+                <div class="card-inner">
+                    <!-- Front Side -->
+                    <div class="card-front">
+                        <div class="special-badge">PREMIUM</div>
+                        <div class="product-image-placeholder">
+                            <div class="cyber-pattern"></div>
+                            <div class="product-type">QUANTV PREMIUM</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Quantv (PREMIUM)</h3>
+                            <p class="price">Rp 150.000</p>
+                            <button class="buy-btn">Beli Sekarang</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Back Side -->
+                    <div class="card-back">
+                        <h3>PREMIUM Package</h3>
+                        <ul class="special-features">
+                            <li>BONUS SPESIAL: Presets Pack Xvisual Ver I (Isi 10 Preset warna eksklusif)</li>
+                            <li>Semua fitur dari paket PRO</li>
+                            <div class="included-pro">
+                                <li>• Update GRATIS 30 hari</li>
+                                <li>• Quantv versi terbaru</li>
+                                <li>• Preset Quantv eksklusif</li>
+                            </div>
+                            <li class="savings">HEMAT 75K! Penawaran Terbaik!</li>
+                        </ul>
+                        <button class="buy-btn">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="LIMITED">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">BOREALIS</div>
+                </div>
+                <div class="product-info">
+                    <h3>BOREALIS (LIMITED) (2/3)</h3>
+                    <p class="description">Edisi SUPER LIMITED! Mod "One And Only" dengan fitur Borealis yang unik. Hanya tersedia 3 lisensi - Jangan sampai kehabisan!</p>
+                    <p class="price">Rp 500.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">MOTION BLUR</div>
+                </div>
+                <div class="product-info">
+                    <h3>8 LEVEL MOTION BLUR</h3>
+                    <p class="description">Kontrol penuh atas efek motion blur! 8 level intensitas berbeda untuk menciptakan gameplay cinematic sesuai seleramu.</p>
+                    <p class="price">Rp 50.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="RESHADE">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">GAME SOURCE</div>
+                </div>
+                <div class="product-info">
+                    <h3>All GameSource (RESHADE)</h3>
+                    <p class="description">Koleksi 11 preset Reshade pilihan untuk berbagai suasana gameplay. Tingkatkan kualitas visual game-mu secara instan!</p>
+                    <p class="price">Rp 25.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">STREET LIGHT</div>
+                </div>
+                <div class="product-info">
+                    <h3>ADVANCE STREET LIGHT</h3>
+                    <p class="description">30 variasi warna lampu jalan yang memukau! Ciptakan suasana kota yang hidup dan dinamis sesuai keinginanmu.</p>
+                    <p class="price">Rp 50.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="CITIZEN">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">TIER 1</div>
+                </div>
+                <div class="product-info">
+                    <h3>CITIZEN TIER 1</h3>
+                    <p class="description">Paket starter dengan 5 mod citizen berkualitas! 3 mod normal + 2 mod No Night untuk pengalaman roleplay yang lebih imersif.</p>
+                    <p class="price">Rp 50.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="CITIZEN">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">TIER 2</div>
+                </div>
+                <div class="product-info">
+                    <h3>CITIZEN TIER 2</h3>
+                    <p class="description">Upgrade koleksi citizen-mu! 10 mod premium dengan 4 citizen normal dan 6 citizen No Night untuk variasi yang lebih beragam.</p>
+                    <p class="price">Rp 100.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="CITIZEN">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">TIER 3</div>
+                </div>
+                <div class="product-info">
+                    <h3>CITIZEN TIER 3 (FULL ACCESS)</h3>
+                    <p class="description">AKSES PENUH ke 19+ mod citizen! Gratis update seumur hidup untuk setiap mod citizen baru. Solusi lengkap untuk para kolektor citizen!</p>
+                    <p class="price">Rp 200.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">GTA V UPSCALER</div>
+                </div>
+                <div class="product-info">
+                    <h3>GTA V UPSCALER</h3>
+                    <p class="description">Tingkatkan resolusi game hingga 4K! Tersedia dalam 3 versi: NVE, PureDark (NO FG & FG). Khusus pengguna RTX.</p>
+                    <p class="price">Rp 150.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="RESHADE">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">GOLD TIER</div>
+                </div>
+                <div class="product-info">
+                    <h3>Gold_Tier MegaPack (RESHADE)</h3>
+                    <p class="description">100+ preset warna eksklusif langsung di fx reshade! Koleksi terlengkap untuk customisasi visual tanpa batas.</p>
+                    <p class="price">Rp 250.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="RESHADE">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">INTER</div>
+                </div>
+                <div class="product-info">
+                    <h3>INTER (RESHADE)</h3>
+                    <p class="description">25 preset Reshade premium dengan tone warna yang artistik. Sempurna untuk content creator yang menginginkan tampilan unik!</p>
+                    <p class="price">Rp 25.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="RESHADE">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">MONSTER KILLER</div>
+                </div>
+                <div class="product-info">
+                    <h3>MONSTER KILLER00K V1 - V5 (RESHADE)</h3>
+                    <p class="description">9 preset Reshade dengan efek visual yang agresif dan berani. Buat gameplay-mu terlihat lebih intense!</p>
+                    <p class="price">Rp 30.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">NP KOIL</div>
+                </div>
+                <div class="product-info">
+                    <h3>NP KOIL SHADERS (ENB)</h3>
+                    <p class="description">Preset legendaris dari NoPixel! Kombinasi sempurna ENB, Reshade, dan file pendukung untuk visual.</p>
+                    <p class="price">Rp 50.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">NVE</div>
+                </div>
+                <div class="product-info">
+                    <h3>NVE (NATURAL VISION EVOLVED)</h3>
+                    <p class="description">Rasakan GTA V dengan grafis next-gen! Dilengkapi NVE versi terbaru dan BONUS preset eksklusif untuk pengalaman visual terbaik.</p>
+                    <p class="price">Rp 50.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">ROAD MODS</div>
+                </div>
+                <div class="product-info">
+                    <h3>ROAD MODs PACK</h3>
+                    <p class="description">8 variasi tekstur jalan premium + update gratis seumur hidup! Tingkatkan realisme kota dengan tekstur jalan yang detail.</p>
+                    <p class="price">Rp 200.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">RTGI</div>
+                </div>
+                <div class="product-info">
+                    <h3>RTGI (RAY TRACING)</h3>
+                    <p class="description">Plugin Reshade premium dengan teknologi ray-tracing! Bonus 10 preset RTGI eksklusif, kompatibel dengan semua versi Reshade.</p>
+                    <p class="price">Rp 50.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">VEGETATION</div>
+                </div>
+                <div class="product-info">
+                    <h3>VEGETATION FOSA 5.0</h3>
+                    <p class="description">Mod vegetasi premium untuk lingkungan yang lebih hidup! Tambahkan detail dan keindahan pada setiap sudut perkotaan.</p>
+                    <p class="price">Rp 50.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">VEGETATION</div>
+                </div>
+                <div class="product-info">
+                    <h3>VEGETATION GREEN GROOVE 2.0</h3>
+                    <p class="description">Transformasi total untuk vegetasi game! Pohon dan tanaman yang lebih realistis untuk pengalaman bermain yang lebih imersif.</p>
+                    <p class="price">Rp 50.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">VIDEO TOOL</div>
+                </div>
+                <div class="product-info">
+                    <h3>VIDEO EXPORT SMOOTHING TOOL</h3>
+                    <p class="description">Tools profesional untuk content creator! Hasilkan video Rockstar Editor yang super halus dengan bantuan langsung dari tim admin.</p>
+                    <p class="price">Rp 300.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="SOUND">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">WEAPON SOUND</div>
+                </div>
+                <div class="product-info">
+                    <h3>WEAPON SOUND PACK</h3>
+                    <p class="description">Revolusi audio senjata! Nikmati suara tembakan yang lebih realistis dan powerful untuk pengalaman action yang lebih intens.</p>
+                    <p class="price">Rp 150.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">XVISUAL</div>
+                </div>
+                <div class="product-info">
+                    <h3>XVISUAL V1 (ENB)</h3>
+                    <p class="description">Paket visual premium dengan preset ENB eksklusif + bonus preset Reshade dan file pendukung. Visual next-gen untuk game-mu!</p>
+                    <p class="price">Rp 250.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="RESHADE">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">XVISUAL</div>
+                </div>
+                <div class="product-info">
+                    <h3>XVISUAL Ver.I (RESHADE)</h3>
+                    <p class="description">10 preset Reshade premium dengan tone warna yang unik. Sempurna untuk screenshot dan video content!</p>
+                    <p class="price">Rp 150.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="RESHADE">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">XVISUAL II</div>
+                </div>
+                <div class="product-info">
+                    <h3>XVISUAL Ver.II Quantv (RESHADE)</h3>
+                    <p class="description">10 preset spesial untuk pengguna Quantv! Kombinasi sempurna dengan mod Quantv untuk hasil visual yang memukau.</p>
+                    <p class="price">Rp 150.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        Website dibangun dengan sepenuh hati <span class="heart">💖</span>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
